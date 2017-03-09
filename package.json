@@ -1,0 +1,38 @@
+{
+  "name": "helloworld",
+  "version": "0.1.0",
+  "description": "Hello world!!",
+  "main": "src/helloworld.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "mocha --ui bdd spec/**/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stonejpn/helloworld.git"
+  },
+  "author": "stonejpn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stonejpn/helloworld/issues"
+  },
+  "homepage": "https://github.com/stonejpn/helloworld#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "mocha": true
+    },
+    "extends": "airbnb",
+    "class-methods-use-this": "off"
+  }
+}
