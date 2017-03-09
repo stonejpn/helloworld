@@ -15,6 +15,6 @@ describe('HelloWorld', () => {
 
     HelloWorld.greeting(response);
     expect(response.writeHead).to.have.been.calledWith(200, { 'Content-Type': 'text/plain' });
-    expect(response.end).to.have.been.calledWith('Hello World!!\n');
+    expect(response.end).to.have.been.calledWith('Hello world!!\n');
   });
 });

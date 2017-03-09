@@ -32,7 +32,6 @@
     "env": {
       "mocha": true
     },
-    "extends": "airbnb",
-    "class-methods-use-this": "off"
+    "extends": "airbnb"
   }
 }
