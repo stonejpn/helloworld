@@ -1,10 +1,10 @@
-const chai = require('chai');
-const sinon = require('sinon');
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
 
-const expect = chai.expect;
-chai.use(require('sinon-chai'));
+import HelloWorld from '../src/helloworld';
 
-const HelloWorld = require('../src/helloworld');
+chai.use(sinonChai);
 
 describe('HelloWorld', () => {
   it('greeting', () => {

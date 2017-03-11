@@ -1,6 +1,6 @@
 // Load the http module to create an http server.
-const http = require('http');
-const HelloWorld = require('./src/helloworld');
+import http from 'http';
+import HelloWorld from './helloworld';
 
 // Configure our HTTP server to respond with Hello World to all requests.
 const server = http.createServer((request, response) => {

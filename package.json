@@ -2,10 +2,11 @@
   "name": "helloworld",
   "version": "0.1.0",
   "description": "Hello world!!",
-  "main": "src/helloworld.js",
+  "main": "lib/helloworld.js",
   "scripts": {
-    "server": "node server.js",
-    "test": "mocha --ui bdd spec/**/*-spec.js"
+    "server": "node ./lib/server.js",
+    "test": "mocha --require babel-polyfill --compilers js:babel-register --ui bdd spec/**/*-spec.js",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/stonejpn/helloworld#readme",
   "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-register": "^6.23.0",
     "chai": "^3.5.0",
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
@@ -32,6 +37,18 @@
     "env": {
       "mocha": true
     },
-    "extends": "airbnb"
+    "extends": [
+      "airbnb",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "rules": {
+      "import/no-commonjs": "warn"
+    }
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }
