@@ -1,12 +1,11 @@
 {
   "name": "helloworld",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Hello world!!",
   "main": "lib/helloworld.js",
   "scripts": {
-    "start": "node ./lib/server.js",
-    "test": "mocha --require babel-polyfill --compilers js:babel-register --ui bdd spec/**/*-spec.js",
-    "build": "babel src -d lib"
+    "start": "webpack-dev-server",
+    "test": "mocha --require babel-polyfill --compilers js:babel-register --ui bdd spec/**/*-spec.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/stonejpn/helloworld#readme",
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-loader": "^6.4.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.1",
     "babel-register": "^6.23.0",
@@ -32,7 +32,9 @@
     "eslint-plugin-react": "^6.10.0",
     "mocha": "^3.2.0",
     "sinon": "^1.17.7",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "eslintConfig": {
     "env": {
