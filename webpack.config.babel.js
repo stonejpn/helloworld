@@ -1,10 +1,10 @@
 import path from 'path';
 
 export default {
-  entry: './src/helloworld.js',
+  entry: './src/app.js',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'helloworld.bundle.js',
+    filename: 'helloworld-app.js',
     publicPath: '/',
   },
   module: {
@@ -17,7 +17,6 @@ export default {
     host: '0.0.0.0',
     port: 8000,
     compress: true,
-    hot: true,
     proxy: {
       '/': { bypass: () => '/index.html' },
     },

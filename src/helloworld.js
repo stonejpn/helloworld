@@ -1,6 +1,13 @@
 export default class HelloWorld {
-  static greeting(response) {
-    response.writeHead(200, { 'Content-Type': 'text/plain' });
-    response.end('Hello world!!\n');
+  constructor(document) {
+    document.addEventListener('DOMContentLoaded', () => {
+      this.sayHello();
+    });
+    this.document = document;
+  }
+
+  sayHello() {
+    const elem = this.document.getElementById('app-root');
+    elem.innerText = 'Hello world!!';
   }
 }
