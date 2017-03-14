@@ -1,13 +1,7 @@
-export default class HelloWorld {
-  constructor(document) {
-    document.addEventListener('DOMContentLoaded', () => {
-      this.sayHello();
-    });
-    this.document = document;
+const HelloWorld = (document, parent) => {
+  if (parent !== null) {
+    const text = document.createTextNode('Hello world!!');
+    parent.appendChild(text);
   }
-
-  sayHello() {
-    const elem = this.document.getElementById('app-root');
-    elem.innerText = 'Hello world!!';
-  }
-}
+};
+export default HelloWorld;

@@ -1,4 +1,4 @@
 import HelloWorld from './helloworld';
 
-const app = new HelloWorld(document);
-app.sayHello();
+const appRoot = document.getElementById('app-root');
+HelloWorld(document, appRoot);

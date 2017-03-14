@@ -7,11 +7,6 @@ export default {
     filename: 'helloworld-app.js',
     publicPath: '/',
   },
-  module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader' },
-    ],
-  },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     host: '0.0.0.0',
