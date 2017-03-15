@@ -3,11 +3,24 @@ module.exports = {
     browser: true,
     mocha: true,
   },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+  },
   extends: [
-    "airbnb",
-    "plugin:import/recommended"
+    'airbnb-base',
+    './.eslintrc.d/inferno.js',
+    './.eslintrc.d/jsx-a11y.js',
+    'plugin:import/recommended',
   ],
+  settings: {
+    'import/extensions': ['.js', '.jsx'],
+  },
   rules: {
-    "import/no-commonjs": "warn"
-  }
+    'arrow-body-style': ['error', 'always'],
+    'import/no-commonjs': 'warn'
+  },
 };
