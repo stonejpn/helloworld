@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { jsdom } from 'jsdom';
 
-import HelloWorld from '../src/helloworld';
+import HelloWorld from './helloworld';
 
 chai.use(sinonChai);
 

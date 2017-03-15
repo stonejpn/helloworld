@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  entry: './src/app.js',
+  entry: './src/app.jsx',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'helloworld-app.js',
@@ -9,7 +9,8 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader' },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
   devServer: {
