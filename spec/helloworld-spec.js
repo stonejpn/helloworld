@@ -12,7 +12,7 @@ describe('HelloWorld', () => {
 
   it('「Hello world!!」が表示される', () => {
     const rendered = TestUtils.renderIntoDocument(<HelloWorld />);
-    const elem = TestUtils.findRenderedVNodeWithType(rendered, 'span');
-    expect(elem.dom.innerHTML).to.be.equal('Hello world!!');
+    const elem = TestUtils.findRenderedDOMElementWithClass(rendered, 'message');
+    expect(elem.innerHTML).to.be.equal('Hello world!!');
   });
 });
