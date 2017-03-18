@@ -23,6 +23,5 @@ module.exports = {
     'arrow-body-style': ['error', 'always'],
     'import/no-commonjs': 'warn',
     'inferno/inferno-in-jsx-scope': 'off',
-    'inferno/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
   },
 };
